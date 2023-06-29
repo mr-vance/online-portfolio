@@ -1,6 +1,13 @@
-# Vance Online Portfolio
+# Vance's Online Portfolio
+<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f47b/512.gif" width="50" height="50">
 
-This is my online portfolio as a software developer, showcasing my skills and services.
+This is my online portfolio as a software developer, showcasing my skills and services. Why is there a ghost emoji here? No idea.
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
+
+<img src="https://readme-jokes.vercel.app/api?bgColor=%cobalt&textColor=%2306d6a0&aColor=%2306d6a0&borderColor=%2306d6a0">
 
 ## Files
 
@@ -38,6 +45,4 @@ As a software developer, I offer the following services:
 
 Feel free to explore the different files and sections of this portfolio to learn more about my work and services!
 
-## License
-
-This project is licensed under the [License Name], which specifies the terms of use. Please refer to the `LICENSE` file for more details.
+![bye](/img/bye-sticker-goodbye-sticker.gif)
