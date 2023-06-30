@@ -1,89 +1,507 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Vance Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="I am a front-end web developer and designer." />
+    <meta name="keywords" content="vance, portfolio, resume, developer, front-end, design" />
+    <meta name="author" content="vance muchongo" />
+    <link rel="shortcut icon" href="v.ico">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.23.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/modernizr.custom.js"></script>
   </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+
+  <body class="page">
+
+    <div class="lm-animated-bg"></div>
+    
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- /Loading animation -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="page-scroll">
+      <div id="page_container" class="page-container bg-move-effect" data-animation="transition-flip-in-right">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <!-- Header -->
+        <header id="site_header" class="header">
+          <div class="header-content clearfix">
+                
+            <!-- Text Logo -->
+            <div class="text-logo">
+              <a href="index.html">
+                <div class="logo-symbol">V</div>
+                <div class="logo-text">Vance <span>Muchongo</span></div>
+              </a>
+            </div>
+            <!-- /Text Logo -->
+
+            <!-- Navigation -->
+            <div class="site-nav mobile-menu-hide">
+              <ul class="leven-classic-menu site-main-menu">
+                <li class="menu-item current-menu-item">
+                  <a href="index.html">About Me</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="resume.html">Resume</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="portfolio.html">Portfolio</a>
+                </li>
+                
+                <li class="menu-item">
+                  <a href="blog.html">Blog</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <a class="menu-toggle mobile-visible">
+              <i class="fa fa-bars"></i>
+            </a>
+            <!-- Mobile Menu Toggle -->
+          </div>
+        </header>
+        <!-- /Header -->
+
+        <div id="main" class="site-main">
+          <div id="main-content" class="single-page-content">
+            <div id="primary" class="content-area">    
+              <div id="content" class="page-content site-content single-post" role="main">
+                <!-- Home Page Top Part -->
+                <div class="row">
+                  <div class=" col-xs-12 col-sm-12">
+                    <div class="home-content">
+                      <div class="row flex-v-align">
+                        
+                        <div class="col-sm-12 col-md-5 col-lg-5">
+                          <div class="home-photo">
+                            <div class="hp-inner" style="background-image: url(./img/main_photo.jpg);">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-7 col-lg-7">
+                          <div class="home-text hp-left">
+                            <div class="owl-carousel text-rotation">                                    
+                              <div class="item">
+                                <h4>Frontend-developer</h4>
+                              </div>
+
+                              <div class="item">
+                                <h4>Web Designer</h4>
+                              </div>
+                            </div>
+                              
+                            <h1>Vance Muchongo</h1>
+                            <p>I specialize in creating visually appealing and user-friendly websites, front end and mobile applications by combining my design expertise with coding skills to deliver seamless and engaging user experiences.</p>
+                                 
+                            <div class="home-buttons">
+                              <a href="/img/vance-cv.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+                              <a href="contact.html" target="_self" class="btn btn-secondary">Contact</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Home Page Top Part -->
+
+                <!-- Services -->
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <div class="p-50"></div>
+
+                    <div class="block-title">
+                      <h2>What I Do</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="info-list-w-icon">
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="fas fa-file"></i>
+
+                        </div>
+      
+                        <div class="ci-text">
+                          <h4>Design Posters and Flyers</h4>
+                          <p>I offer professional poster and flyer design services, creating visually captivating promotional materials you can use to effectively communicate your message and attract attention to your events, products, or services, ultimately boosting your marketing efforts and enhancing brand visibility.</p>
+                        </div>
+                      </div>
+    
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="fas fa-mobile-alt"></i>
+                        </div>
+     
+                        <div class="ci-text">
+                          <h4>Develop Mobile Apps</h4>
+                          <p>I specialize in developing customized mobile applications for both Android and iOS platforms you can use to reach a wider audience, improve customer engagement, and provide convenient access to your products or services, resulting in increased brand loyalty, customer satisfaction, and potential revenue growth.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="info-list-w-icon">
+
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="fab fa-html5"></i>
+                        </div>
+
+                        <div class="ci-text">
+                          <h4>Develop Websites</h4>
+                          <p>I offer website development services, creating responsive and dynamic websites that cater for your unique needs, especially to help you establish a strong online presence, showcase your offerings, engage with your target audience, and drive conversions, ultimately expanding your reach, credibility, and business growth.</p>
+                        </div>
+                      </div>
+
+                      <div class="info-block-w-icon">
+                        <div class="ci-icon">
+                          <i class="fas fa-code"></i>
+                        </div>
+
+                        <div class="ci-text">
+                          <h4>Front-end Web Applications</h4>
+                          <p>I specialize in developing front-end web applications using modern web technologies you need to enhance user experiences on your website, create interactive interfaces, and deliver seamless navigation, resulting in improved user engagement, satisfaction, and ultimately achieving your business goals more effectively.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Services -->
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <div class="p-20"></div>
+
+                    <!-- Testimonials -->
+                    <div class="block-title">
+                      <h2>Testimonials</h2>
+                    </div>
+
+                    <div id="testimonials_1" class="testimonials owl-carousel" data-mobile-items="1" data-tablet-items="2" data-items="2">
+                      <!-- Testimonial 1 -->
+                      <div class="testimonial-item">
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-content">
+                          <!-- Picture -->
+                          <div class="testimonial-picture">
+                            <img src="./img/testimonials/faith.jpeg" alt="Faith Mokgalaka"/>
+                          </div>              
+                          <!-- /Picture -->
+
+                          <!-- Testimonial Text -->
+                          <div class="testimonial-text">
+                             <p>Vance led the software development team at Puno and also helped build Puno's entire technical system from the ground up.</p>
+                          </div>
+                          <!-- /Testimonial Text -->
+
+                          <!-- Testimonial author information -->
+                          <div class="testimonial-author-info">
+                            <h5 class="testimonial-author">Faith Mokgalaka</h5>
+                            <p class="testimonial-firm">Puno (PTY) Ltd.</p>
+                          </div>
+                          <!-- /Testimonial author information -->
+
+                          <div class="testimonial-icon">
+                            <i class="fa fa-quote-left"></i>
+                          </div>
+
+                           <div class="testimonial-icon-big">
+                            <i class="fa fa-quote-right"></i>
+                          </div>
+                        </div>
+                        <!-- /Testimonial Content -->
+                      </div>
+                      <!-- End of Testimonial 1 -->
+
+                      <!-- Testimonial 2 -->
+                      <div class="testimonial-item">
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-content">
+                          <!-- Picture -->
+                          <div class="testimonial-picture">
+                            <img src="./img/testimonials/khanyisa.jpeg" alt="Khanyisa Mashale"/>
+                          </div>              
+                          <!-- /Picture -->
+
+                          <!-- Testimonial Text -->
+                          <div class="testimonial-text">
+                             <p>I used his website development services whereby he developed a great tutoring portfolio for me.</p>
+                          </div>
+                          <!-- /Testimonial Text -->
+
+                          <!-- Testimonial author information -->
+                          <div class="testimonial-author-info">
+                            <h5 class="testimonial-author">Khanyisa Mashale</h5>
+                            <p class="testimonial-firm">Khanyisa Math Tutor</p>
+                          </div>
+                          <!-- /Testimonial author information -->
+
+                          <div class="testimonial-icon">
+                            <i class="fa fa-quote-left"></i>
+                          </div>
+
+                           <div class="testimonial-icon-big">
+                            <i class="fa fa-quote-right"></i>
+                          </div>
+                        </div>
+                        <!-- /Testimonial Content -->
+                      </div>
+                      <!-- End of Testimonial 2 -->
+
+                      <!-- End of Testimonial 3 -->
+                      <div class="testimonial-item">
+
+                        <!-- Testimonial Content -->
+                        <div class="testimonial-content">
+                          <!-- Picture -->
+                          <div class="testimonial-picture">
+                            <img src="./img/testimonials/tebogo.png" alt="Tebogo Seripe"/>
+                          </div>              
+                          <!-- /Picture -->
+
+                          <!-- Testimonial Text -->
+                          <div class="testimonial-text">
+                            <p>I have worked with Vance for more than 18 months now and he has helped me build a wonderful website for my business.</p>
+                          </div>
+                          <!-- /Testimonial Text -->
+
+                          <!-- Testimonial author information -->
+                          <div class="testimonial-author-info">
+                            <h5 class="testimonial-author">Tebogo Seripe</h5>
+                            <p class="testimonial-firm">Livewell Aesthetics</p>
+                          </div>
+                          <!-- /Testimonial author information -->
+
+                          <div class="testimonial-icon">
+                            <i class="fa fa-quote-left"></i>
+                          </div>
+
+                          <div class="testimonial-icon-big">
+                            <i class="fa fa-quote-right"></i>
+                          </div>
+                        </div>
+                        <!-- /Testimonial Content -->
+
+                      </div>
+                      <!-- End of Testimonial 3 -->
+                    </div>
+                    <!-- /Testimonials -->
+
+                    <div class="p-40"></div>
+
+
+                    <div class="p-40"></div>
+
+                  </div>
+                </div>
+
+                <!-- Fun Facts -->
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <div class="block-title">
+                      <h2>Fun Facts</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block gray-default">
+                      <i class="linecons linecons-heart"></i>
+                      <h4>Happy clients</h4>
+                      <span class="lm-info-block-value">3+</span>
+                      <span class="lm-info-block-text"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block gray-default">
+                      <i class="fas fa-tasks"></i>
+                      <h4>Projects</h4>
+                      <span class="lm-info-block-value">7+</span>
+                      <span class="lm-info-block-text"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-3 ">
+                    <div class="lm-info-block gray-default">
+                      <i class="fas fa-handshake"></i>
+                      <h4>Partners</h4>
+                      <span class="lm-info-block-value">5+</span>
+                      <span class="lm-info-block-text"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-3 ">
+                    <div class="lm-info-block gray-default">
+                      <i class="linecons linecons-clock"></i>
+                      <h4>Years of service</h4>
+                      <span class="lm-info-block-value">4+</span>
+                      <span class="lm-info-block-text"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Fun Facts -->
+
+                <div class="p-40"></div>
+
+                <!-- Pricing -->
+                <!-- <div class="row">
+                  <div class=" col-xs-12 col-sm-12 ">
+                    <div class="block-title">
+                      <h2>Pricing</h2>
+                    </div>
+                  </div>
+
+                </div> -->
+
+                <!-- <div class="row">
+                  <div class=" col-xs-12 col-sm-12 ">
+                    <div class="fw-pricing clearfix row">
+                      
+                      <div class="fw-package-wrap col-md-4 ">
+                        <div class="fw-package">
+                          <div class="fw-heading-row">
+                            <span>Silver</span>
+                          </div>
+                          
+                          <div class="fw-pricing-row">
+                            <span>R250</span>
+                            <small>per month</small>
+                          </div>
+                          
+                          <div class="fw-button-row">
+                            <a href="#" target="_self" class="btn btn-secondary">Request</a>
+                          </div>
+
+                          <div class="fw-default-row">Lorem ipsum dolor</div>
+                          <div class="fw-default-row">Pellentesque scelerisque</div>
+                          <div class="fw-default-row">Morbi eu sagittis</div>
+                        </div>
+                      </div>
+   
+                      <div class="fw-package-wrap col-md-4 highlight-col ">
+                        <div class="fw-package">
+                          <div class="fw-heading-row">
+                            <span>Gold</span>
+                          </div>
+                          
+                          <div class="fw-pricing-row">
+                            <span>$128</span>
+                            <small>per month</small>
+                          </div>
+
+                          <div class="fw-button-row">
+                            <a href="#" target="_self" class="btn btn-primary">Free Trial</a>
+                          </div>
+                          
+                          <div class="fw-default-row">Lorem ipsum dolor</div>
+                          <div class="fw-default-row">Pellentesque scelerisque</div>
+                          <div class="fw-default-row">Morbi eu sagittis</div>
+                          <div class="fw-default-row">Donec non diam</div>
+                          <div class="fw-default-row">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fw-package-wrap col-md-4 default-col ">
+                      <div class="fw-package">
+                        <div class="fw-heading-row">
+                          <span>Platinum</span>
+                        </div>
+                        
+                        <div class="fw-pricing-row">
+                          <span>$256</span>
+                          <small>per month</small>
+                        </div>
+                        
+                        <div class="fw-button-row">
+                          <a href="#" target="_self" class="btn btn-primary">Free Trial</a>
+                        </div>
+                        
+                        <div class="fw-default-row">Lorem ipsum dolor</div>
+                        <div class="fw-default-row">Pellentesque scelerisque</div>
+                        <div class="fw-default-row">Morbi eu sagittis</div>
+                        <div class="fw-default-row">Donec non diam</div>
+                        <div class="fw-default-row">Aenean nec libero</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer clearfix">
+          <div class="footer-social">
+            <ul class="footer-social-links">
+              <li>
+                <a href="#" target="_blank">Twitter</a>
+              </li>
+
+              <li>
+                <a href="#" target="_blank">Facebook</a>
+              </li>
+
+              <li>
+                <a href="#" target="_blank">Instagram</a>
+              </li>
+            </ul>
+          </div>
+              
+          <div class="footer-copyrights">
+            <p>© 2020 All rights reserved. LMPixels.</p>
+          </div>
+        </footer>
+        <!-- /Footer -->
+        
+      </div>
+    </div>
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7de9a1e09deb4fd6","version":"2023.4.0","r":1,"b":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":100}' crossorigin="anonymous"></script>
+</body>
 </html>
