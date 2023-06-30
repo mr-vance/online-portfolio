@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-
     <script src="js/modernizr.custom.js"></script>
+    
+
   </head>
 
   <body class="page">
@@ -142,7 +143,7 @@
                       <h2>How Can I Help You?</h2>
                     </div>
 
-                    <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
+                    <form id="contact_form" class="contact-form">
 
                       <div class="messages"></div>
 
@@ -216,6 +217,61 @@
         
       </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+
+      var firebaseConfig = {
+        apiKey: "AIzaSyCn_sHww2SrPCab81iW2pxvNoocgF_1tt8",
+        authDomain: "vance-muchongo.firebaseapp.com",
+        projectId: "vance-muchongo",
+        storageBucket: "vance-muchongo.appspot.com",
+        messagingSenderId: "330402725176",
+        appId: "1:330402725176:web:d49c87d47c86b0147315cd",
+        measurementId: "G-VTZTY3LFFG"
+      };
+        // Initialize Firebase
+        var app = initializeApp(firebaseConfig);
+        var analytics = getAnalytics(app);
+          // Get a reference to the database service
+          var database = firebase.database().ref();
+  
+      // Handle form submission
+      document.getElementById('contact_form').addEventListener('submit', submitForm);
+  
+      function submitForm(event) {
+        event.preventDefault(); // Prevent form submission
+  
+        // Get form values
+        var name = document.getElementById('form_name').value;
+        var email = document.getElementById('form_email').value;
+        var subject = document.getElementById('form_subject').value;
+        var message = document.getElementById('form_message').value;
+  
+        // Save form data to Firebase database
+        database.ref('formSubmissions').push().set({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        }).then(function() {
+          // Clear form inputs
+          document.getElementById('form_name').value = '';
+          document.getElementById('form_email').value = '';
+          document.getElementById('form_subject').value = '';
+          document.getElementById('form_message').value = '';
+  
+          // Redirect or display a success message to the user
+          alert('Form submitted successfully!');
+        }).catch(function(error) {
+          // Handle any errors
+          console.error('Error submitting form:', error);
+          alert('An error occurred. Please try again later.');
+        });
+      }
+    </script>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
