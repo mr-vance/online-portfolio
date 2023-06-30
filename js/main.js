@@ -177,7 +177,7 @@
                     return r("body,html").animate({ scrollTop: 0 }, 400), !1;
                 }),
                 r("#map").googleMap({ zoom: 16 }),
-                r("#map").addMarker({ address: "S601 Townsend Street, San Francisco, California, USA" }),
+                r("#map").addMarker({ address: "41 Juta StBraamfontein, Johannesburg, 2001" }),
                 d(),
                 (t = ""),
                 r(".skill-container").each(function () {
