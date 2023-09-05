@@ -7,6 +7,7 @@ This is my online portfolio as a software developer, showcasing my skills and se
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+<img src="https://readme-jokes.vercel.app/api?bgColor=%cobalt&textColor=%2306d6a0&aColor=%2306d6a0&borderColor=%2306d6a0">
 
 ## Files
 
