@@ -38,10 +38,9 @@ This is my online portfolio as a software developer, showcasing my skills and se
 
 As a software developer, I offer the following services:
 
-1. Design Posters and Flyers: I create visually appealing posters and flyers for various purposes.
-2. Develop Mobile Apps: I specialize in building mobile applications for both Android and iOS platforms.
-3. Develop Websites: I create responsive and dynamic websites tailored to the needs of clients.
-4. Front-end Web Applications: I develop front-end web applications using modern web technologies.
+1. Develop Mobile Apps: I specialize in building mobile applications for both Android and iOS platforms.
+2. Develop Websites: I create responsive and dynamic websites tailored to the needs of clients.
+3. Front-end Web Applications: I develop front-end web applications using modern web technologies.
 
 Feel free to explore the different files and sections of this portfolio to learn more about my work and services!
 
