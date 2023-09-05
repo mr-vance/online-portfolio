@@ -3,9 +3,9 @@
 
 This is my online portfolio as a software developer, showcasing my skills and services. Why is there a ghost emoji here? No idea.
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
+![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 <img src="https://readme-jokes.vercel.app/api?bgColor=%cobalt&textColor=%2306d6a0&aColor=%2306d6a0&borderColor=%2306d6a0">
 
