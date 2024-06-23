@@ -1,7 +1,7 @@
 # Vance's Online Portfolio
 <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f47b/512.gif" width="50" height="50">
 
-This is my online portfolio as a software developer, showcasing my skills and services. Why is there a ghost emoji here? No idea.
+This is my online portfolio.
 
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
